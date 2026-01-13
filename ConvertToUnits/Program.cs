@@ -2,6 +2,17 @@
 {
     internal class Program
     {
+        static float ConvertMeterToFeet(float number)
+        {
+            float result = number * 3,28084;
+            return result;
+        }
+
+        static float ConvertSmToKm(float number)
+        {
+            float result = number / 100000;
+            return result;
+        }
         static void Main(string[] args)
         {
             Console.Write("Выьерите, введя число в какую систему си вы бы хотели перевести число");
@@ -20,11 +31,15 @@
                     case 1:
                         Console.WriteLine("Введите число ");
                         number = Convert.ToInt32(Console.ReadLine());
+                        ConvertMeterToFeet(number);
+                        Console.WriteLine(number);
                         break;
 
                     case 2:
                         Console.WriteLine("Введите число ");
+                        ConvertSmToKm(number)
                         number = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine(number);
                         break;
 
                     case 3:
